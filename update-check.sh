@@ -8,7 +8,7 @@ tezos_dir="/home/tezos/tezos/"
 
 # Don't change anything from here down
 
-current=$(curl -s --header "PRIVATE-TOKEN: $gitlab_private_token" "https://gitlab.com/api/v4/projects/tezos%2Ftezos/repository/commits/?ref_name=mainnet" | jq -r '.[0].id')
+current=$(curl -s --header "PRIVATE-TOKEN: $gitlab_private_token" "https://gitlab.com/api/v4/projects/tezos%2Ftezos/repository/commits/?ref_name=latest-release" | jq -r '.[0].id')
 
 myinstall=$(cd $tezos_dir && git rev-parse HEAD)
 
