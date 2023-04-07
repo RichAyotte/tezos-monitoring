@@ -23,8 +23,8 @@ export TEZOS_CLIENT_UNSAFE_DISABLE_DISCLAIMER=Y
 # Do not modify anything from here down
 
 flag=$1
-nodestatus=$(ps -fU $tezosuser | grep "[t]ezos-node run")
-echo "$nodestatus" | grep -qi "tezos-node run"
+nodestatus=$(ps -fU $tezosuser | grep "octez-node run")
+echo "$nodestatus" | grep -qi "octez-node run"
 if [ $? -eq 0 ];then
         if [[ $flag = "headers" ]];then
                 echo -e "DATE      |TIME    |NETWORK|NODE   |BEHIND"
